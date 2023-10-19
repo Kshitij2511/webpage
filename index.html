@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kshitij Kumar Pandey - Personal Website</title>
+    <link rel="stylesheet" href="webpage.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+        </div>
+    </header>
+
+    <nav>
+        <a href="home.html">Homepage</a>
+        <a href="bio.html">A brief biosketch</a>
+        <a href="education.html">Education</a>
+        <a href="awards.html">Honours/Awards</a>
+        <a href="publications.html">Publications</a>
+        <a href="workshops.html">Workshops/Conferences</a>
+    </nav>
+
+    <section id="homepage">
+        <h2 style="text-align: center;">Homepage</h2>
+        <div class="homepage-content">
+            <div style="display: flex; align-items: center;">
+                <img src="Fig1e.jpg" alt="Kshitij Kumar Pandey" style="max-width: 50%; height: auto;">
+                <div>
+                <p style="margin-left: 20px"; background-color: gray>
+                    Contact Info:<br>
+                    Dr. Kshitij Kumar Pandey <br>
+                    Room Number: MZ 194<br>
+                    Department of Mathematics<br>
+                    Indian Institute of Technology Delhi<br>
+                    New Delhi - 110016, India.<br>
+                    Email: <span class="email-obfuscate">FIRST NAME[DOT]sxcr[AT]gmail[DOT]com</span>
+                </p>
+                </div>
+            </div>
+    </section>
+    <script type="text/javascript">
+        const elements = document.querySelectorAll(".email-obfuscate");
+        elements.forEach(element => {
+            const email = element.textContent.replace(/\s+/g, '');
+            const emailParts = email.split('[DOT]');
+            element.innerHTML = `<a href="mailto:${emailParts[0]}@${emailParts[1]}.${emailParts[2]}">${email}</a>`;
+        });
+    </script>
+</body>
+</html>
